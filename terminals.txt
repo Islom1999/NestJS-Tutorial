@@ -1,0 +1,26 @@
+
+
+npm i -g @nestjs/cli            // nestjs ni globalni yuklab olish
+nest new project-name           // yangi nestjs project ochish
+
+npm run start:dev               // projectni ishga tushurush
+
+//=================================================================================================
+// generate schematic
+
+nest generate module blog       //  blog nomli module file yaratish 
+nest g module blog              // 
+
+nest g controller blog              // blog nomli controller file yaratish spec file ham qo'shib
+nest g controller blog --no-spec    // blog nomli controller file yaratish spec file qo'shimay
+
+nest g service blog                 // blog nomli service file yaratish spec file ham qo'shib
+nest g service blog --no-spec       // blog nomli service file yaratish spec file ham qo'shib
+
+nest g class blog                   // class yaratish
+
+
+npm i @nestjs/mongoose mongoose     // mongose packageni yuklab olish
+nest g class blog.schema            // schema yaratish 
+
+npm i --save class-validator class-transformer    // validator package install
