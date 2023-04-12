@@ -33,7 +33,7 @@ export class BlogService {
         return this.blogModel.findOne({slug: id})
     }
     async update( id:string, dto: BlogDto ){
-        return this.blogModel.findOneAndUpdate({slug:id}, dto, {new: true})  // {new: true}  o'zgargan qiymatni qaytaradi 
+        return this.blogModel.findByIdAndUpdate(id, dto, {new: true})  // {new: true}  o'zgargan qiymatni qaytaradi 
     } 
     async delete( id:string ){
         return this.blogModel.findByIdAndRemove(id)

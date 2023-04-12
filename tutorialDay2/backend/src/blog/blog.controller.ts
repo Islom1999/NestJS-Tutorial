@@ -30,9 +30,10 @@ export class BlogController {
 
     @HttpCode(200)
     @Patch(':id')
+    // @UsePipes( ValidationPipe )      
     async update(@Param('id') id:string, @Body() dto: BlogDto){
-        return this.blogService.update(id, dto)  
-    }
+        return this.blogService.update(id, dto)   
+    }     
 
     @HttpCode(200)
     @Delete(':id')
