@@ -13,18 +13,18 @@ export class BlogService {
     constructor(@InjectModel(Blog.name) private blogModel: Model<BlogDocument>){}
 
     async getAllBlog(){
-        return this.blogModel.find({})
+        return await this.blogModel.find({})
     }
     async create( dto: BlogDto ){
-        return this.blogModel.create(dto)
+        return await this.blogModel.create(dto)
     }
     async getById( id:string ){
-        return this.blogModel.findById(id)
+        return await this.blogModel.findById(id)
     }
     async update( id:string, dto: BlogDto ){
-        return this.blogModel.findByIdAndUpdate(id, dto, {new: true})  // {new: true}  o'zgargan qiymatni qaytaradi 
+        return await this.blogModel.findByIdAndUpdate(id, dto, {new: true})  // {new: true}  o'zgargan qiymatni qaytaradi 
     } 
     async delete( id:string ){
-        return this.blogModel.findByIdAndRemove(id)
+        return await this.blogModel.findByIdAndRemove(id)
     }
 }
